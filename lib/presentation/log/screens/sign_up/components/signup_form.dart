@@ -112,7 +112,7 @@ class _SignUpFormState extends State<SignUpForm> {
             ElevatedButton(
               onPressed: () {
                 if (_formfield.currentState!.validate()) {
-                  print("Succès");
+                  debugPrint("Succès");
                   emailController.clear();
                   passController.clear();
                   usernameController
