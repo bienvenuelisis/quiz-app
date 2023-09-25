@@ -14,9 +14,9 @@ class SignUpScreenTopImage extends StatelessWidget {
       children: [
         Text(
           "S'INSCRIRE".toUpperCase(),
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: defaultPadding),
+        const SizedBox(height: defaultPadding),
         Row(
           children: [
             const Spacer(),

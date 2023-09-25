@@ -16,8 +16,10 @@ class _LoginFormState extends State<LoginForm> {
   final _formfield = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
-  final usernameController = TextEditingController(); // Ajout du contrôleur pour le nom d'utilisateur
-  final nameController = TextEditingController(); // Nouveau contrôleur pour le nom
+  final usernameController =
+      TextEditingController(); // Ajout du contrôleur pour le nom d'utilisateur
+  final nameController =
+      TextEditingController(); // Nouveau contrôleur pour le nom
   bool passToggle = true;
 
   @override
@@ -31,7 +33,8 @@ class _LoginFormState extends State<LoginForm> {
               keyboardType: TextInputType.text,
               textInputAction: TextInputAction.next,
               cursorColor: kPrimaryColor,
-              controller: usernameController, // Utilisation du contrôleur pour le nom d'utilisateur
+              controller:
+                  usernameController, // Utilisation du contrôleur pour le nom d'utilisateur
               decoration: const InputDecoration(
                 hintText: "Username",
                 prefixIcon: Padding(
@@ -45,6 +48,8 @@ class _LoginFormState extends State<LoginForm> {
                 } else if (!RegExp(r"^[A-Z][a-zA-Z0-9]{4,}$").hasMatch(value)) {
                   return "Le nom d'utilisateur doit commencer par une majuscule et contenir au moins 5 caractères alphanumériques.";
                 }
+
+                return null;
               },
             ),
             const SizedBox(height: defaultPadding / 2),
@@ -57,12 +62,11 @@ class _LoginFormState extends State<LoginForm> {
                 textInputAction: TextInputAction.done,
                 //obscureText: true,
                 cursorColor: kPrimaryColor,
-                decoration:  InputDecoration(
+                decoration: InputDecoration(
                   hintText: "MOt de passe",
                   prefixIcon: const Padding(
                     padding: EdgeInsets.all(defaultPadding),
                     child: Icon(Icons.lock),
-
                   ),
                   suffix: InkWell(
                     onTap: () {
@@ -70,16 +74,18 @@ class _LoginFormState extends State<LoginForm> {
                         passToggle = !passToggle;
                       });
                     },
-                    child: Icon(passToggle ? Icons.visibility : Icons.visibility_off),
+                    child: Icon(
+                        passToggle ? Icons.visibility : Icons.visibility_off),
                   ),
-
                 ),
-                validator: (value){
-                  if(value!.isEmpty){
+                validator: (value) {
+                  if (value!.isEmpty) {
                     return "Entrer un mot de passe";
-                  }
-                  else if(passController.text.length < 6)
+                  } else if (passController.text.length < 6) {
                     return "Le mot de passe doit dépasser six caractères";
+                  }
+
+                  return null;
                 },
               ),
             ),
@@ -87,7 +93,6 @@ class _LoginFormState extends State<LoginForm> {
             Hero(
               tag: "login_btn",
               child: ElevatedButton(
-
                 onPressed: () {
                   if (_formfield.currentState!.validate()) {
                     Navigator.push(
@@ -99,7 +104,7 @@ class _LoginFormState extends State<LoginForm> {
                       ),
                     );
                   }
-                /*  {
+                  /*  {
                     String fullName = nameController.text;
                     Navigator.pushReplacement(
                       context,
@@ -113,9 +118,11 @@ class _LoginFormState extends State<LoginForm> {
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0), // Définissez le BorderRadius ici
+                    borderRadius: BorderRadius.circular(
+                        10.0), // Définissez le BorderRadius ici
                   ),
-                  minimumSize: const Size(double.infinity, 50.0), // Largeur et hauteur personnalisées
+                  minimumSize: const Size(double.infinity,
+                      50.0), // Largeur et hauteur personnalisées
                 ),
                 child: Text(
                   "Se connecter".toUpperCase(),
