@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../constants.dart';
-
+import '../../constants.dart';
 
 class WelcomeImage extends StatelessWidget {
   const WelcomeImage({
@@ -26,14 +25,16 @@ class WelcomeImage extends StatelessWidget {
             const Spacer(),
           ],
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const Text(
           "Bienvenue sur notre application de quizz",
-          style: TextStyle(fontWeight: FontWeight.bold,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
             fontSize: 18,
           ),
         ),
-
         const SizedBox(height: defaultPadding * 4),
       ],
     );

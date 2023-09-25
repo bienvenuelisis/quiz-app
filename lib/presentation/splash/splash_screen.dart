@@ -5,13 +5,14 @@ import '../welcome/welcomeScreen.dart';
 import 'gradient_colors.dart';
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 4)).then((_) => {
-      Navigator.pushReplacement(context, MaterialPageRoute(
-          builder: (context) => WelcomeScreen()
-      ))
-    });
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const WelcomeScreen()))
+        });
 
     return Scaffold(
       body: Container(

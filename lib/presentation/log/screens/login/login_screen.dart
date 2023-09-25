@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../responsive.dart';
+import '../../../../responsive.dart';
 import '../../components/background.dart';
 import 'components/login_form.dart';
 import 'components/login_screen_top_image.dart';
@@ -12,27 +12,26 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Background(
       child: Responsive(
-          mobile: MobileLoginScreen(),
-          desktop: Row(
-            children: [
-              Expanded(
-                child: LoginScreenTopImage(),
+        mobile: MobileLoginScreen(),
+        desktop: Row(
+          children: [
+            Expanded(
+              child: LoginScreenTopImage(),
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 450,
+                    child: LoginForm(),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 450,
-                      child: LoginForm(),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-
+      ),
     );
   }
 }

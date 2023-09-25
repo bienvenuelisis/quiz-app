@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Log/Screens/Login/login_screen.dart';
-import '../Log/Screens/Signup/signup_screen.dart';
-import '../constants.dart';
-
-
+import '../../constants.dart';
+import '../log/Screens/Login/login_screen.dart';
+import '../log/Screens/Signup/signup_screen.dart';
 
 class LoginAndSignupBtn extends StatelessWidget {
   const LoginAndSignupBtn({
@@ -30,9 +28,11 @@ class LoginAndSignupBtn extends StatelessWidget {
             },
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0), // Définissez le BorderRadius ici
+                borderRadius: BorderRadius.circular(
+                    10.0), // Définissez le BorderRadius ici
               ),
-              minimumSize: const Size(double.infinity, 50.0), // Largeur et hauteur personnalisées
+              minimumSize: const Size(
+                  double.infinity, 50.0), // Largeur et hauteur personnalisées
             ),
             child: Text(
               "Se connecter".toUpperCase(),
@@ -57,19 +57,21 @@ class LoginAndSignupBtn extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0), // Définissez le BorderRadius ici
+              borderRadius:
+                  BorderRadius.circular(10.0), // Définissez le BorderRadius ici
             ),
-            primary: kPrimaryLightColor,
+            backgroundColor: kPrimaryLightColor,
             elevation: 0,
-            minimumSize: const Size(double.infinity, 50.0), // Largeur et hauteur personnalisées
+            minimumSize: const Size(
+                double.infinity, 50.0), // Largeur et hauteur personnalisées
           ),
           child: Text(
             "S'inscrire".toUpperCase(),
-            style: const TextStyle(color: Colors.black,
+            style: const TextStyle(
+              color: Colors.black,
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),
-
           ),
         ),
       ],

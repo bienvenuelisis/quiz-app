@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quizz_app/welcome/welcome_image.dart';
+import 'package:quizz_app/presentation/welcome/welcome_image.dart';
 
-import '../Log/components/background.dart';
-import '../responsive.dart';
+import '../log/components/background.dart';
+import '../../responsive.dart';
 import 'login_signup_btn.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -40,8 +40,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             onPressed: () {},
                             icon: CircleAvatar(
                               radius: 25,
-                              child: Image.asset(
-                                  'assets/icons/facebook.png'),
+                              child: Image.asset('assets/icons/facebook.png'),
                             ),
                           ),
                           IconButton(
@@ -49,16 +48,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             icon: CircleAvatar(
                               radius: 25,
                               backgroundColor: Colors.transparent,
-                              child:
-                              Image.asset('assets/icons/google.png'),
+                              child: Image.asset('assets/icons/google.png'),
                             ),
                           ),
                           IconButton(
                             onPressed: () {},
                             icon: CircleAvatar(
                               radius: 25,
-                              child: Image.asset(
-                                  'assets/icons/linkedin.png'),
+                              child: Image.asset('assets/icons/linkedin.png'),
                             ),
                           ),
                         ],
@@ -68,14 +65,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ],
             ),
-            mobile: MobileWelcomeScreen(),
+            mobile: const MobileWelcomeScreen(),
           ),
         ),
       ),
     );
   }
 }
-
 
 class MobileWelcomeScreen extends StatelessWidget {
   const MobileWelcomeScreen({

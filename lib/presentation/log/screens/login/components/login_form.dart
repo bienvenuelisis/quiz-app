@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '../../../../HomePage/Home.dart';
-import '../../../../constants.dart';
-import '../../../components/already_have_an_account_acheck.dart';
-import '../../Signup/signup_screen.dart';
+import 'package:quizz_app/constants.dart';
+import 'package:quizz_app/presentation/home_page/home.dart';
+import 'package:quizz_app/presentation/log/Screens/Signup/signup_screen.dart';
+import 'package:quizz_app/presentation/log/components/already_have_an_account_acheck.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
