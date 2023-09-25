@@ -16,7 +16,7 @@ class Background extends StatelessWidget {
     return Scaffold(
       //resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           child: Stack(

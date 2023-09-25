@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../welcome/welcomeScreen.dart';
+import '../welcome/welcome_screen.dart';
 import 'gradient_colors.dart';
 
 class SplashScreen extends StatelessWidget {

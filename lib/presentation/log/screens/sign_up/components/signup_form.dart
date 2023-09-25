@@ -102,8 +102,9 @@ class _SignUpFormState extends State<SignUpForm> {
                 validator: (value) {
                   if (value!.isEmpty) {
                     return "Entrer un mot de passe";
-                  } else if (passController.text.length < 6)
+                  } else if (passController.text.length < 6) {
                     return "Le mot de passe doit dépasser six caractères";
+                  }
                   return null;
                 },
               ),
